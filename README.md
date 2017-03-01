@@ -1,6 +1,10 @@
 Docker example for a normal web (Drupal) site
 =============================================
 
+Build status
+------------
+
+
 This repository is educational / sample to provide some bootstrapping code to create Docker containers for y/our projects.
 
 What does Docker provide? Docker is a superlight "virtualization" that makes you insulated environments for - let's say webservers, php, redis, solr, mysql - everything. This and the ability to configure it allows you and other developers to instantly setup development environment without compromising anything on your host machine.
