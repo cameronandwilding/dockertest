@@ -13,6 +13,7 @@ web:
     - ./docker/config/php.ini:/usr/local/etc/php/conf.d/php.ini
   links:
     - db:database
+    - redis:cache
 
 # MySQL image
 db:
@@ -25,3 +26,8 @@ db:
   environment:
     MYSQL_ROOT_PASSWORD: root
     MYSQL_DATABASE: drupal
+
+# Redis image
+redis:
+  # Use the official image
+  image: redis:latest
