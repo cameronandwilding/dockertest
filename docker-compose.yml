@@ -1,0 +1,17 @@
+web:
+  build: ./docker/php
+  ports:
+    - 8765:80
+  volumes:
+    - ./webroot:/var/www/html
+    - ./docker/config/php.ini:/usr/local/etc/php/conf.d/php.ini
+  links:
+    - db:database
+
+db:
+  image: mariadb
+  volumes:
+    - ./db:/var/lib/mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: drupal
