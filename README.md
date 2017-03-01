@@ -4,6 +4,8 @@ Docker example for a normal web (Drupal) site
 Build status
 ------------
 
+[![Build Status](https://travis-ci.org/cameronandwilding/dockertest.svg?branch=master)](https://travis-ci.org/cameronandwilding/dockertest)
+
 
 This repository is educational / sample to provide some bootstrapping code to create Docker containers for y/our projects.
 
