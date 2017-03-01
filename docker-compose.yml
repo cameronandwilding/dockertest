@@ -1,5 +1,8 @@
+# PHP/Apache image
 web:
+  # Use the Dockerfile instead of a default image
   build: ./docker/php
+  # Map inside ports to the host system
   ports:
     - 8765:80
   volumes:
@@ -8,10 +11,14 @@ web:
   links:
     - db:database
 
+# MySQL image
 db:
+  # Use official MariaDB iamge
   image: mariadb
+  # Make storage permanent by storing everything in a mounted local folder
   volumes:
     - ./db:/var/lib/mysql
+  # Set up DB credential and initial database
   environment:
     MYSQL_ROOT_PASSWORD: root
     MYSQL_DATABASE: drupal
