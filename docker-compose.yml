@@ -4,9 +4,12 @@ web:
   build: ./docker/php
   # Map inside ports to the host system
   ports:
-    - 8765:80
+    - 8888:80
+  # Mount local files and folders
   volumes:
+    # Mount web source to Apache docroot
     - ./webroot:/var/www/html
+    # Mount local php.ini
     - ./docker/config/php.ini:/usr/local/etc/php/conf.d/php.ini
   links:
     - db:database
