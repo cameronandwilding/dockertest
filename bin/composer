@@ -1,0 +1,1 @@
+sudo docker exec dockertest_web_1 php /root/composer.phar $*
